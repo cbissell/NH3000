@@ -1,0 +1,29 @@
+<% provide(:title, 'New Hire') %>
+<h1>Input New Employee</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+		<%= render 'shared/error_messages' %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :startDate %>
+      <%= f.password_field :startDate %>
+
+      <%= f.label :officeLocation, "Office Location" %>
+      <%= f.password_field :officeLocation %>
+
+      <%= f.label :computerType, "Retina or Non Retina?" %>
+      <%= f.password_field :computerType %>
+
+      <%= f.label :department %>
+      <%= f.password_field :department %>
+
+      <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
